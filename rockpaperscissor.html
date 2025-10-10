@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <h4>choose your option</h4>
+        <div class="choice">
+            <button onclick="opt('Rock')">Rock</button>
+            <button onclick="opt('Paper')">Paper</button>
+            <button onclick="opt('Scissor')">Scissor</button>
+        </div>
+    <div id="res">Result</div>
+    <script>
+            function opt(chosen) {
+                const options = ["Rock", "Paper", "Scissor"];
+                const userChoice = chosen;
+                const computerChoice = options[Math.floor(Math.random() * 3)];
+                let result = "";
+                if (userChoice === computerChoice) {
+                    result = "Draw!";
+                } else if (
+                    (userChoice === "Rock" && computerChoice === "Scissor") ||
+                    (userChoice === "Paper" && computerChoice === "Rock") ||
+                    (userChoice === "Scissor" && computerChoice === "Paper")
+                ) {
+                    result = "You win!";
+                } else {
+                    result = "You lose!";
+                }
+                document.getElementById("res").innerHTML = `You chose: ${userChoice}<br>Computer chose: ${computerChoice}<br>${result}`;
+            }
+
+    </script>
+</body>
+</html>
