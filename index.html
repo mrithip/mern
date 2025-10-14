@@ -1,19 +1,48 @@
-<html>
-    <body>
-        <h1>
-            !
-        </h1>
-        <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laboriosam a at dolorem exercitationem, ab vero illum officiis placeat totam nemo dicta inventore necessitatibus corrupti labore officia ducimus laudantium earum?
-        </h2>
-    <a href="cars.html">click to see</a>
-    <a href="rockpaperscissor.html">click to see</a>
-    <a href="mern.html">click to see</a>
-    <a href="grid.html">click to see</a>
-    <a href="basic-html-page.html">click to see</a>
-    <a href="page1.html">click to see</a>
-    <a href="mediaquery.html">click to see</a>
-    <a href="script.js">click to see</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* black background */
+            color: #fff; /* white text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
 
-    </body>
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000; /* black text */
+            background-color: #fff; /* white button */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background-color: #000; /* black on hover */
+            color: #fff; /* white text on hover */
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+    <p>Click the button below to go to rock-paper-scissors game.</p>
+    <a href="rock-paper-scissors.html">rock-paper-scissors</a>
+</body>
 </html>
