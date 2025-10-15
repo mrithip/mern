@@ -1,8 +1,23 @@
 import React from 'react'
+import New from './components/New'
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
+import { Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div class='bg-black px-1.5 py-1.5 w-200 h-40'></div>
+    <>
+
+    {/* <New name ="RAUF" dept="CSE" skills={["eat","sleep","play"]}></New> */}
+    <Routes>
+      <Route path="/" Component={Home}/>
+      <Route path="/contact" Component={Contact}/>
+      <Route path="/about" Component={About}/>
+    </Routes>
+    <Navbar/>
+    </>
   )
 }
 
