@@ -27,3 +27,20 @@ Content-Type: application/json
     "email":"blacky@gmail.com",
     "password":"blacky123"
 }
+###
+
+POST http://localhost:4000/task/addtask
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NzA3ODE4YWJjYmQ2ZjA4N2U2OTNhMyIsImlhdCI6MTc2OTA1NjAyMCwiZXhwIjoxNzY5MTQyNDIwfQ.-UPWu2grps5FZTQn_IifFxCY6Cd27HgbtHq1ku-C-d0
+
+{
+    "title":"mern",
+    "description":"complete task app",
+    "status":"pending"
+}
+###
+
+GET http://localhost:4000/task/gettask
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NzA3ODE4YWJjYmQ2ZjA4N2U2OTNhMyIsImlhdCI6MTc2OTA1NjAyMCwiZXhwIjoxNzY5MTQyNDIwfQ.-UPWu2grps5FZTQn_IifFxCY6Cd27HgbtHq1ku-C-d0
+
