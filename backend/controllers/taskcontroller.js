@@ -29,3 +29,48 @@ exports.gettask = async(req,res)=>{
 
     res.json({ tasks })
 }
+
+exports.gettaskbyid = async(req,res)=>{
+    const { id } = req.params;
+
+    const task = await Task.findOne({ _id: id, user: req.user.id });
+
+    if (!task){
+        return res.status(404).json({ message: "task not found" })
+    }
+
+    res.json({ task })
+}
+
+exports.updatetaskbyid = async(req,res)=>{
+
+    const { id } = req.params;
+    const { title, description, status } = req.body;
+
+    const task = await Task.findOneAndUpdate(
+        { _id: id, user: req.user.id },
+        { $set: { title, description, status } },
+        { new: true }
+    );
+
+    if (!task) {
+        return res.status(404).json({ message: "task not found" });
+    }
+
+    res.json({ message: "task updated successfully", task });
+}
+
+exports.deletetaskbyid = async(req,res)=>{
+
+    const { id } = req.params;
+
+    const task = await Task.findOneAndDelete(
+        { _id: id, user: req.user.id },
+    );
+
+    if (!task) {
+        return res.status(404).json({ message: "task not found" });
+    }
+
+    res.json({ message: "task deleted successfully"});
+}
