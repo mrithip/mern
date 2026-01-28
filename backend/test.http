@@ -65,3 +65,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NzA3ODE4Y
 DELETE http://localhost:4000/task/delete/6971a7260bfe9ef94f610835
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NzA3ODE4YWJjYmQ2ZjA4N2U2OTNhMyIsImlhdCI6MTc2OTA1NjAyMCwiZXhwIjoxNzY5MTQyNDIwfQ.-UPWu2grps5FZTQn_IifFxCY6Cd27HgbtHq1ku-C-d0
+###
+
+
+POST https://mern-le9m.onrender.com/task/addtask
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NzA3ODE4YWJjYmQ2ZjA4N2U2OTNhMyIsImlhdCI6MTc2OTA3NDY2NiwiZXhwIjoxNzY5MTYxMDY2fQ.xUBOYmAy2n_v9yqj3mRAqncH8n4723LBlJTo6BAk1Ys
+
+{
+    "title":"mern",
+    "description":"complete task app",
+    "status":"pending"
+}
